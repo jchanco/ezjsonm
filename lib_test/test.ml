@@ -72,7 +72,7 @@ let test_stream jsons () =
   let strings = "[" :: strings @ [string last; "]"] in
   let jsons = jsons @ [last] in
   Lwt_main.run begin
-    let open Lwt.Infix in
+    let open Lwt in
     let stream = Lwt_stream.of_list strings in
     let stream = Ezjsonm_lwt.from_stream stream in
     Lwt_stream.to_list stream >|= fun json' ->

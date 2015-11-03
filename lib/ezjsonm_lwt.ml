@@ -14,7 +14,7 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  *)
 
-open Lwt.Infix
+open Lwt
 open Ezjsonm
 
 exception Escape of ((int * int) * (int * int)) * Jsonm.error
